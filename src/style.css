@@ -92,8 +92,17 @@ h1 span { color: #cb766e; }
   background: #f1eadc;
 }
 
-#scene-container { position: absolute; inset: 0; }
-#scene-container canvas { display: block; width: 100%; height: 100%; }
+.lesson-demo { display: grid; place-items: center; }
+.demo-orbit { position: absolute; width: min(54vw, 480px); aspect-ratio: 1; border: 1px solid rgba(203, 118, 110, 0.25); border-radius: 50%; transform: rotate(-22deg); }
+.demo-orbit::after { content: ''; position: absolute; top: 12%; right: 10%; width: 18px; height: 18px; border-radius: 50%; background: #e4b84d; box-shadow: 0 0 0 12px rgba(228, 184, 77, 0.13); }
+.demo-content { position: relative; z-index: 1; width: min(76%, 420px); text-align: center; }
+.demo-kicker { color: #b09f86; font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; }
+.demo-content h2 { margin: 18px 0 12px; color: #2a2d2b; font-size: clamp(2.5rem, 5vw, 5rem); letter-spacing: -0.08em; line-height: 0.95; }
+.demo-content p:not(.demo-kicker) { color: #716b61; line-height: 1.6; }
+.demo-content button { margin-top: 18px; padding: 13px 22px; border: 0; border-radius: 999px; color: #fffaf0; background: #cb766e; font: inherit; cursor: pointer; transition: transform 180ms ease, background 180ms ease; }
+.demo-content button:hover { background: #b85f58; transform: translateY(-2px); }
+.lesson-demo.is-active .demo-orbit { animation: spin 4s linear infinite; }
+@keyframes spin { to { transform: rotate(338deg); } }
 
 .scene-caption {
   position: absolute;
