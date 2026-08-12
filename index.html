@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Three.js 八周创意编程学习旅程" />
+    <title>Three.js 八周学习旅程</title>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="intro-panel" aria-labelledby="page-title">
+        <p class="eyebrow">WEEK 01 · FOUNDATIONS</p>
+        <h1 id="page-title">把代码变成<br /><span>一个小世界。</span></h1>
+        <p class="intro-copy">
+          这是我的 Three.js 八周学习旅程。先理解场景、相机、灯光和动画，
+          再一步步做出属于自己的互动 3D 作品。
+        </p>
+        <div class="lesson-card">
+          <div class="lesson-number">01</div>
+          <div>
+            <p class="lesson-label">本周练习</p>
+            <h2>认识一个 Three.js 场景</h2>
+            <p>移动鼠标观察物体，点击它们查看不同的材质和位置。</p>
+          </div>
+        </div>
+        <div class="controls-hint" aria-label="交互提示">
+          <span class="hint-dot"></span>
+          <span>悬停 / 点击场景中的物体</span>
+        </div>
+      </section>
+
+      <section class="scene-panel" aria-label="Three.js 互动场景">
+        <div id="scene-container"></div>
+        <div class="scene-caption">
+          <span id="object-name">等待你的探索</span>
+          <span class="scene-status">LIVE SCENE</span>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
